@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 django = "==2.1.7"
-scikit-learn = "==0.22.2.post1"
+scikit-learn = "==0.24.2"
 numpy = "==1.18.1"
-pandas = "==0.25.3"
+pandas = "==1.0.3"
 xlwt = "*"
-psycopg2-binary = "==2.8.6"
+mysqlclient = "==2.1.1"
 openpyxl = "*"
 
 [dev-packages]
