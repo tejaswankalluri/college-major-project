@@ -70,10 +70,11 @@ WSGI_APPLICATION = 'deepfake_detection.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_db',
-        'USER': 'mysql',
-        'PASSWORD': 'mysql',
-        'HOST': '127.0.0.1',
+        'NAME': 'db',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        # 'HOST': '127.0.0.1',
+        'HOST': 'db',
         'PORT': '3306',
     }
 }

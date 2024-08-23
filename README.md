@@ -8,10 +8,8 @@
 
 - Install python3.7
 - Install mysql server
-- Install pipenv (pip install pipenv)
 - `cd college-major-project`
-- `pipenv shell`
-- `pipenv sync`
+- `pip install -r requirements.txt`
 - `python manage.py migrate`
 - `python manage.py runserver`
 - `open http://localhost:8000`
@@ -22,3 +20,9 @@
 - `docker-compose build`
 - `docker-compose up`
 - `open http://0.0.0.0:8000`
+
+## Extras
+
+- For service provider username and password
+  - username: "Admin"
+  - password: "Admin"

@@ -9,15 +9,15 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-# Install & use pipenv
-COPY Pipfile Pipfile.lock ./
+# Install
 RUN python -m pip install --upgrade pip
-RUN pip install pipenv && pipenv install --dev --system --deploy
+RUN apt update && apt install -y default-libmysqlclient-dev libxslt-dev gcc
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
 
 WORKDIR /app
 COPY . /app
 
 EXPOSE 8000
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 # CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
